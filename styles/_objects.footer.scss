@@ -1,0 +1,15 @@
+/* -----------------------------------------------------------------------------
+
+  Objects - Footer
+
+----------------------------------------------------------------------------- */
+
+.Footer {
+  padding: 2.4rem 0;
+  text-align: center;
+  border-top: solid 1px $color-neutral-8;
+
+  @include break(sm) {
+    padding: 4.8rem 0;
+  }
+}
