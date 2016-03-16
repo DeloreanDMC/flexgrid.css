@@ -3283,23 +3283,31 @@ img {
 ----------------------------------------------------------------------------- */
 .Header {
   margin: 0;
-  padding: 0;
+  padding: 1.2rem;
+  background-color: #28aadc;
 }
 
 .Header-title {
-  margin: 2.4rem;
+  margin: 0;
   padding: 0;
-  color: #818181;
-  font-size: 2.8rem;
+  color: #fff;
+  font-size: 1.6rem;
   font-weight: 300;
   text-align: center;
 }
 
-@media (min-width: 480px) {
-  .Header-title {
-    margin: 4.8rem;
-    font-size: 4.2rem;
-  }
+.Header-link {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 2.1rem;
+}
+
+.Header-icon {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 /* -----------------------------------------------------------------------------
