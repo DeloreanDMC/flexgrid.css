@@ -1,7 +1,7 @@
 CNAME
 gulpfile.js
 index.html
-js
-fonts
-scss
+js/*
+fonts/*
+scss/*
 !scss/flexgrid.scss
