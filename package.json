@@ -15,7 +15,6 @@
     "jshint-stylish": "^2.0.1"
   },
   "description": "Flexgrid is a responsive, declarative grid system powered by flexbox.",
-  "main": "gulpfile.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/callmenick/flexgrid.css.git"
