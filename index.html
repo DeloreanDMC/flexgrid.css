@@ -13,38 +13,45 @@
 <body>
 
 <header class="Header">
-  <section class="Section">
-    <div class="Container Container--full Container--center">
-      <h1 class="Header-title">Flexgrid.css</h1>
-      <ul class="Grid Grid--justifyCenter Grid--gutter-xl">
-        <li class="Grid-cell--auto">
-          <i class="fa fa-user"></i> Nick Salloum
-        </li>
-        <li class="Grid-cell--auto">
-          <i class="fa fa-globe"></i> <a href="http://callmenick.com">callmenick.com</a>
-        </li>
-        <li class="Grid-cell--auto">
-          <i class="fa fa-github"></i> <a href="https://github.com/callmenick/flexgrid.css">flexgrid.css</a>
-        </li>
-      </ul>
+  <div class="Grid Grid--spaceBetween Grid--alignCenter Grid--gutter-xl">
+    <div class="Grid-cell--auto">
+      <h1 class="Grid-cell--auto Header-title"><i class="fa fa-th"></i> Flexgrid.css</h1>
     </div>
-  </section><!-- /Section -->
-  <section class="Section">
-    <div class="Container Container--narrow Container--center">
-      <div id="github-icons"></div>
+    <div class="Grid-cell--auto">
+      <a href="https://github.com/callmenick/flexgrid.css" class="Header-link"><i class="Header-icon fa fa-github"></i></a>
     </div>
-  </section><!-- /Section -->
+  </div>
+</header><!-- /Header -->
+
+<main class="Main">
   <section class="Section">
     <div class="Container Container--full Container--center">
       <p class="Text--headline">Flexgrid.css is a responsive, declarative grid system powered by flexbox. Checkout <a href="https://github.com/callmenick/flexgrid.css">GitHub for documentation and installation guides</a>, or have fun checking out the demos below.</p>
     </div>
   </section><!-- /Section -->
-</header><!-- /Header -->
 
-<main class="Main">
-  <div class="Container Container--full">
+  <section class="Section">
+    <div class="Container Container--full">
+      <h2>Default Auto Sizing</h2>
+      <div class="Grid Grid--gutter-xl">
+        <div class="Grid-cell--auto">
+          <div class="Grid-content"></div>
+        </div>
+        <div class="Grid-cell--auto">
+          <div class="Grid-content"></div>
+        </div>
+        <div class="Grid-cell--auto">
+          <div class="Grid-content"></div>
+        </div>
+        <div class="Grid-cell--auto">
+          <div class="Grid-content"></div>
+        </div>
+      </div>
+    </div>
+  </section><!-- /Section -->
 
-    <section class="Section">
+  <section class="Section">
+    <div class="Container Container--full">
       <h2>Fill Space</h2>
       <div class="Grid Grid--gutter-xl">
         <div class="Grid-cell--xs">
@@ -54,9 +61,11 @@
           <div class="Grid-content"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section><!-- /Section -->
 
-    <section class="Section">
+  <section class="Section">
+    <div class="Container Container--full">
       <h2>Unordered List</h2>
       <ul class="Grid Grid--gutter-xl">
         <li class="Grid-cell--xs-12 Grid-cell--md-2">
@@ -69,9 +78,11 @@
           <div class="Grid-content"></div>
         </li>
       </ul>
-    </section>
+    </div>
+  </section><!-- /Section -->
 
-    <section class="Section">
+  <section class="Section">
+    <div class="Container Container--full">
       <h2>New Line, Adaptive Sizing</h2>
       <div class="Grid Grid--gutter-xl">
         <div class="Grid-cell--xs-4 Grid-cell--md-3 Grid-cell--lg-2">
@@ -108,9 +119,11 @@
           <div class="Grid-content"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section><!-- /Section -->
 
-    <section class="Section">
+  <section class="Section">
+    <div class="Container Container--full">
       <h2>Multiple Adaptive Sizing</h2>
       <div class="Grid Grid--gutter-xl">
         <div class="Grid-cell--xs-12 Grid-cell--md-2 Grid-cell--xl-4">
@@ -132,9 +145,11 @@
           <div class="Grid-content"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section><!-- /Section -->
 
-    <section class="Section">
+  <section class="Section">
+    <div class="Container Container--full">
       <h2>Center Extra Cells</h2>
       <div class="Grid Grid--justifyCenter Grid--gutter-xl">
         <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4 Grid-cell--xl-2">
@@ -168,9 +183,11 @@
           <div class="Grid-content"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section><!-- /Section -->
 
-    <section class="Section">
+  <section class="Section">
+    <div class="Container Container--full">
       <h2>Pack Extra Cells To End</h2>
       <div class="Grid Grid--justifyEnd Grid--gutter-xl">
         <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4 Grid-cell--xl-2">
@@ -204,9 +221,11 @@
           <div class="Grid-content"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section><!-- /Section -->
 
-    <section class="Section">
+  <section class="Section">
+    <div class="Container Container--full">
       <h2>Distribute Extra Cells (space between)</h2>
       <div class="Grid Grid--spaceBetween Grid--gutter-xl">
         <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4 Grid-cell--xl-2">
@@ -240,9 +259,11 @@
           <div class="Grid-content"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section><!-- /Section -->
 
-    <section class="Section">
+  <section class="Section">
+    <div class="Container Container--full">
       <h2>Distribute Extra Cells (space around)</h2>
       <div class="Grid Grid--spaceAround Grid--gutter-xl">
         <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4 Grid-cell--xl-2">
@@ -276,9 +297,30 @@
           <div class="Grid-content"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section><!-- /Section -->
 
-  </div>
+  <section class="Section">
+    <div class="Container Container--full Container--center">
+      <ul class="Grid Grid--justifyCenter Grid--gutter-xl">
+        <li class="Grid-cell--auto">
+          <i class="fa fa-user"></i> Nick Salloum
+        </li>
+        <li class="Grid-cell--auto">
+          <i class="fa fa-globe"></i> <a href="http://callmenick.com">callmenick.com</a>
+        </li>
+        <li class="Grid-cell--auto">
+          <i class="fa fa-github"></i> <a href="https://github.com/callmenick/flexgrid.css">flexgrid.css</a>
+        </li>
+      </ul>
+    </div>
+  </section><!-- /Section -->
+
+  <section class="Section">
+    <div class="Container Container--narrow Container--center">
+      <div id="github-icons"></div>
+    </div>
+  </section><!-- /Section -->
 </main><!-- /Main -->
 
 <footer class="Footer">
