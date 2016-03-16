@@ -3,7 +3,7 @@
  * License - MIT
  */
 
-$grid-breakpoints: (
+$flexgrid-breakpoints: (
   xs: 320px,
   sm: 480px,
   md: 640px,
@@ -12,17 +12,17 @@ $grid-breakpoints: (
   xx: 1200px
 );
 
-$grid-columns: 12;
+$flexgrid-columns: 12;
 
-$grid-gutters: (
+$flexgrid-gutters: (
   sm: 0.2rem,
   md: 0.4rem,
   lg: 0.8rem,
   xl: 1.6rem
 );
 
-@mixin break($size) {
-  @media (min-width: map-get($grid-breakpoints, $size)) {
+@mixin flexgrid-break($size) {
+  @media (min-width: map-get($flexgrid-breakpoints, $size)) {
     @content;
   }
 }
@@ -113,6 +113,10 @@ $grid-gutters: (
   flex: 1;
 }
 
+.Grid-cell--auto {
+  flex: 0 1 auto;
+}
+
 /**
  * Grid-cell--[size]
  * Grid-cell--[size]-[span]
@@ -160,36 +164,36 @@ $grid-gutters: (
  * </div>
  */
 
-$grid-cell-counter: 1;
-@each $key, $val in $grid-breakpoints {
+$flexgrid-cell-counter: 1;
+@each $key, $val in $flexgrid-breakpoints {
   .Grid-cell--#{$key} {
     flex: 0 0 100%;
     max-width: 100%;
 
-    @include break($key) {
+    @include flexgrid-break($key) {
       flex: 1;
     }
   }
 
-  @for $i from 1 through $grid-columns {
-    @if ($grid-cell-counter == 1) {
+  @for $i from 1 through $flexgrid-columns {
+    @if ($flexgrid-cell-counter == 1) {
       .Grid-cell--#{$key}-#{$i} {
-        flex: 0 0 ($i/$grid-columns)*100%;
-        max-width: ($i/$grid-columns)*100%;
+        flex: 0 0 ($i/$flexgrid-columns)*100%;
+        max-width: ($i/$flexgrid-columns)*100%;
       }
     }
   }
 
-  @include break($key) {
-    @for $i from 1 through $grid-columns {
+  @include flexgrid-break($key) {
+    @for $i from 1 through $flexgrid-columns {
       .Grid-cell--#{$key}-#{$i} {
-        flex: 0 0 ($i/$grid-columns)*100%;
-        max-width: ($i/$grid-columns)*100%;
+        flex: 0 0 ($i/$flexgrid-columns)*100%;
+        max-width: ($i/$flexgrid-columns)*100%;
       }
     }
   }
 
-  $grid-cell-counter: $grid-cell-counter + 1;
+  $flexgrid-cell-counter: $flexgrid-cell-counter + 1;
 }
 
 /**
@@ -197,7 +201,7 @@ $grid-cell-counter: 1;
  *
  * Grid gutters are used to give grid cells spacing between each other. They are
  * optional modifiers to the grid, and come in various sizes based on the
- * $grid-gutters configuration.
+ * $flexgrid-gutters configuration.
  *
  * Example HTML:
  *
@@ -208,7 +212,7 @@ $grid-cell-counter: 1;
  * </div>
  */
 
-@each $key, $val in $grid-gutters {
+@each $key, $val in $flexgrid-gutters {
   .Grid--gutter-#{$key} {
     margin-top: -$val;
     margin-left: -$val;
