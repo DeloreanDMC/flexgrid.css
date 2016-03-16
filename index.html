@@ -3,30 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Demo</title>
-  <meta name="description" content="">
+  <title>Flexgrid.css - Call Me Nick</title>
+  <meta name="description" content="Flexgrid.css is a responsive, declarative grid system powered by flexbox.">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="css/flexgrid.css">
+  <link rel="apple-touch-icon" href="http://callmenick.com/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="http://callmenick.com/favicon.png">
 </head>
 <body>
 
 <header class="Header">
-  <nav class="Nav">
-    <a href="#" class="Nav-link"><i class="fa fa-arrow-left"></i> Previous Demo</a>
-    <a href="#" class="Nav-link">Back To Article <i class="fa fa-star"></i></a>
-  </nav><!-- /Nav -->
   <section class="Section">
-    <div class="Container">
-      <h1 class="Header-title">Responsive, Declarative Grid System</h1>
+    <div class="Container Container--full Container--center">
+      <h1 class="Header-title">Flexgrid.css</h1>
+      <ul class="Grid Grid--justifyCenter Grid--gutter-xl">
+        <li class="Grid-cell--auto">
+          <i class="fa fa-user"></i> Nick Salloum
+        </li>
+        <li class="Grid-cell--auto">
+          <i class="fa fa-globe"></i> <a href="http://callmenick.com">callmenick.com</a>
+        </li>
+        <li class="Grid-cell--auto">
+          <i class="fa fa-github"></i> <a href="https://github.com/callmenick/flexgrid.css">flexgrid.css</a>
+        </li>
+      </ul>
+    </div>
+  </section><!-- /Section -->
+  <section class="Section">
+    <div class="Container Container--narrow Container--center">
+      <div id="github-icons"></div>
+    </div>
+  </section><!-- /Section -->
+  <section class="Section">
+    <div class="Container Container--full Container--center">
+      <p class="Text--headline">Flexgrid.css is a responsive, declarative grid system powered by flexbox. Checkout <a href="https://github.com/callmenick/flexgrid.css">GitHub for documentation and installation guides</a>, or have fun checking out the demos below.</p>
     </div>
   </section><!-- /Section -->
 </header><!-- /Header -->
 
-<main class="o-main">
-  <section class="Section">
-    <div class="Container Container--full">
+<main class="Main">
+  <div class="Container Container--full">
 
+    <section class="Section">
       <h2>Fill Space</h2>
       <div class="Grid Grid--gutter-xl">
         <div class="Grid-cell--xs">
@@ -36,7 +54,9 @@
           <div class="Grid-content"></div>
         </div>
       </div>
+    </section>
 
+    <section class="Section">
       <h2>Unordered List</h2>
       <ul class="Grid Grid--gutter-xl">
         <li class="Grid-cell--xs-12 Grid-cell--md-2">
@@ -49,7 +69,9 @@
           <div class="Grid-content"></div>
         </li>
       </ul>
+    </section>
 
+    <section class="Section">
       <h2>New Line, Adaptive Sizing</h2>
       <div class="Grid Grid--gutter-xl">
         <div class="Grid-cell--xs-4 Grid-cell--md-3 Grid-cell--lg-2">
@@ -86,7 +108,9 @@
           <div class="Grid-content"></div>
         </div>
       </div>
+    </section>
 
+    <section class="Section">
       <h2>Multiple Adaptive Sizing</h2>
       <div class="Grid Grid--gutter-xl">
         <div class="Grid-cell--xs-12 Grid-cell--md-2 Grid-cell--xl-4">
@@ -108,7 +132,9 @@
           <div class="Grid-content"></div>
         </div>
       </div>
+    </section>
 
+    <section class="Section">
       <h2>Center Extra Cells</h2>
       <div class="Grid Grid--justifyCenter Grid--gutter-xl">
         <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4 Grid-cell--xl-2">
@@ -142,7 +168,9 @@
           <div class="Grid-content"></div>
         </div>
       </div>
+    </section>
 
+    <section class="Section">
       <h2>Pack Extra Cells To End</h2>
       <div class="Grid Grid--justifyEnd Grid--gutter-xl">
         <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4 Grid-cell--xl-2">
@@ -176,7 +204,9 @@
           <div class="Grid-content"></div>
         </div>
       </div>
+    </section>
 
+    <section class="Section">
       <h2>Distribute Extra Cells (space between)</h2>
       <div class="Grid Grid--spaceBetween Grid--gutter-xl">
         <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4 Grid-cell--xl-2">
@@ -210,7 +240,9 @@
           <div class="Grid-content"></div>
         </div>
       </div>
+    </section>
 
+    <section class="Section">
       <h2>Distribute Extra Cells (space around)</h2>
       <div class="Grid Grid--spaceAround Grid--gutter-xl">
         <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4 Grid-cell--xl-2">
@@ -244,15 +276,10 @@
           <div class="Grid-content"></div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section><!-- /Section -->
-  <section class="Section">
-    <div class="Container">
-      <div id="github-icons"></div>
-    </div>
-  </section><!-- /Section -->
-</main><!-- /o-main -->
+  </div>
+</main><!-- /Main -->
 
 <footer class="Footer">
   <div class="Container">
@@ -260,7 +287,7 @@
   </div>
 </footer><!-- /Footer -->
 
-<!-- EXTERNAL SCRIPTS FOR CALLMENICK.COM, PLEASE DO NOT INCLUDE
+<!-- EXTERNAL SCRIPTS FOR CALLMENICK.COM, PLEASE DO NOT INCLUDE -->
 <script src="js/src/githubicons.js"></script>
 <script src="js/src/carbonad.js"></script>
 <script>
@@ -271,7 +298,6 @@
   ga('create', 'UA-34160351-1', 'auto');
   ga('send', 'pageview');
 </script>
--->
 <!-- /EXTERNAL SCRIPTS -->
 
 </body>
