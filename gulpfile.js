@@ -18,7 +18,7 @@
    * Paths
    */
   var paths = {
-    styles: ['styles/**/*.scss'],
+    scss: ['scss/**/*.scss'],
     scripts: ['js/src/**/*.js']
   };
 
@@ -26,7 +26,7 @@
    * Styles
    */
   gulp.task('styles', function() {
-    return gulp.src(paths.styles)
+    return gulp.src(paths.scss)
       .pipe(sass({
         outputStyle: 'expanded'
       }))
@@ -63,7 +63,7 @@
       }
     });
 
-    gulp.watch(paths.styles, ['styles']);
+    gulp.watch(paths.scss, ['styles']);
     gulp.watch(paths.scripts, ['lint']);
     gulp.watch('./*.html').on('change', browserSync.reload);
   });
