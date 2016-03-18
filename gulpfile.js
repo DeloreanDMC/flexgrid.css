@@ -6,70 +6,37 @@
    */
   var gulp = require('gulp');
   var autoprefixer = require('gulp-autoprefixer');
-  var browserSync = require('browser-sync').create();
   var cssmin = require('gulp-cssmin');
-  var jshint = require('gulp-jshint');
-  var notify = require('gulp-notify');
   var rename = require('gulp-rename');
   var sass = require('gulp-sass');
-  var stylish = require('jshint-stylish');
-
-  /**
-   * Paths
-   */
-  var paths = {
-    scss: ['scss/**/*.scss'],
-    scripts: ['js/src/**/*.js']
-  };
 
   /**
    * Styles
    */
   gulp.task('styles', function() {
-    return gulp.src(paths.scss)
+    return gulp.src('src/flexgrid.scss')
       .pipe(sass({
         outputStyle: 'expanded'
       }))
-      .on('error', notify.onError({
-        title: 'Error compiling Sass',
-        message: 'Check the console for info'
-      }))
       .on('error', sass.logError)
       .pipe(autoprefixer())
-      .pipe(gulp.dest('css'))
+      .pipe(gulp.dest('dist'))
       .pipe(cssmin())
       .pipe(rename({
         suffix: '.min'
       }))
-      .pipe(gulp.dest('css'));
+      .pipe(gulp.dest('dist'));
   });
 
   /**
-   * Scripts linting
+   * Watch task for development
    */
-  gulp.task('lint', function() {
-    return gulp.src(paths.scripts)
-      .pipe(jshint())
-      .pipe(jshint.reporter(stylish));
-  });
-
-  /**
-   * Serve task
-   */
-  gulp.task('serve', ['styles', 'lint'], function() {
-    browserSync.init({
-      server: {
-        baseDir: './'
-      }
-    });
-
-    gulp.watch(paths.scss, ['styles']);
-    gulp.watch(paths.scripts, ['lint']);
-    gulp.watch('./*.html').on('change', browserSync.reload);
+  gulp.task('watch', function() {
+    gulp.watch('src/flexgrid.scss', ['styles']);
   });
 
   /**
    * Default task
    */
-  gulp.task('default', ['styles', 'lint']);
+  gulp.task('default', ['styles']);
 })();
