@@ -1,0 +1,41 @@
+/* -----------------------------------------------------------------------------
+
+  Objects - Header
+
+----------------------------------------------------------------------------- */
+
+.Header {
+  margin: 0;
+  padding: 4.8rem 0;
+  text-align: center;
+  border-bottom: solid 1px $color-neutral-8;
+}
+
+.Header-title {
+  margin: 0;
+  padding: 0;
+  font-size: map-get($font-size, xl);
+  font-weight: 300;
+
+  i {
+    color: $color-brand-1;
+    display: block;
+  }
+
+  small {
+    color: $color-neutral-6;
+    font-size: 0.6em;
+  }
+
+  @include break(md) {
+    font-size: map-get($font-size, xx);
+  }
+}
+
+.Header-headline {
+  font-size: map-get($font-size, md);
+
+  @include break(md) {
+    font-size: map-get($font-size, lg);
+  }
+}

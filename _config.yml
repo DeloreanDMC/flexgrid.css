@@ -1,0 +1,12 @@
+# Site settings
+title: flexgrid.css
+email: nick.salloum@axiomzen.co
+description: >
+  Flexgrid.css is a responsive, declarative grid system powered by flexbox. It
+  allows you to generate finely tuned responsive layouts at a lightning pace.
+url: "http://www.axiomzen.co" # the base hostname & protocol for your site
+twitter_username: nicksalloum_
+github_username:  callmenick
+
+# Build settings
+markdown: kramdown

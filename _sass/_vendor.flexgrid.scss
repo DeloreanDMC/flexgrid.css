@@ -1,5 +1,11 @@
+/* -----------------------------------------------------------------------------
+
+  Vendor - Flexgrid
+
+----------------------------------------------------------------------------- */
+
 /*!
- * Flexgrid.css by callmenick - github.com/callmenick/flexgrid.css
+ * Flexgrid.css by axiomzen.co - github.com/axiomzen/flexgrid.css
  * License - MIT
  */
 
@@ -15,10 +21,12 @@ $flexgrid-breakpoints: (
 $flexgrid-columns: 12;
 
 $flexgrid-gutters: (
-  sm: 0.2rem,
-  md: 0.4rem,
-  lg: 0.8rem,
-  xl: 1.6rem
+  xs: 0.2rem,
+  sm: 0.32rem,
+  md: 0.52rem,
+  lg: 0.84rem,
+  xl: 1.36rem,
+  xx: 2.2rem
 );
 
 @mixin flexgrid-break($size) {
@@ -66,15 +74,15 @@ $flexgrid-gutters: (
   flex-direction: column; /* 4 */
 }
 
-.Grid--top {
+.Grid--alignStart {
   align-items: flex-start; /* 5 */
 }
 
-.Grid--bottom {
+.Grid--alignEnd {
   align-items: flex-end; /*  6 */
 }
 
-.Grid--center {
+.Grid--alignCenter {
   align-items: center; /* 7 */
 }
 
@@ -222,17 +230,4 @@ $flexgrid-cell-counter: 1;
       padding-left: $val;
     }
   }
-}
-
-/**
- * Grid-content
- *
- * This is just an demonstrative aesthetic class to contain and style content
- * inside a grid cell. It isn't necessary, and you'll likely be using your
- * own inner styling containers.
- */
-
-.Grid-content {
-  padding: 1.2rem;
-  background-color: #eee;
 }

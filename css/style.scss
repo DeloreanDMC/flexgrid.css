@@ -1,3 +1,7 @@
+---
+---
+@charset "utf-8";
+
 // config
 @import "config.variables";
 @import "config.mixins";
@@ -5,6 +9,7 @@
 // vendor
 @import "vendor.normalize";
 @import "vendor.fontawesome";
+@import "vendor.flexgrid";
 
 // generic
 @import "generic.fonts";
@@ -23,10 +28,9 @@
 @import "objects.nav";
 @import "objects.main";
 @import "objects.section";
-@import "objects.subnav";
 @import "objects.footer";
 
 
 // components
 @import "components.text";
-@import "components.carbonad";
+@import "components.box";

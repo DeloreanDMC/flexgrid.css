@@ -27,22 +27,18 @@ $line-height: (
 //
 // -----------------------------------------------------------------------------
 
-$color-neutral-1: rgb(21, 21, 21);
-$color-neutral-2: rgb(39, 39, 39);
-$color-neutral-3: rgb(59, 59, 59);
-$color-neutral-4: rgb(109, 109, 109);
-$color-neutral-5: rgb(129, 129, 129);
-$color-neutral-6: rgb(179, 179, 179);
-$color-neutral-7: rgb(231, 231, 231);
-$color-neutral-8: rgb(241, 241, 241);
+$color-neutral-1: #111;
+$color-neutral-2: #333;
+$color-neutral-3: #555;
+$color-neutral-4: #777;
+$color-neutral-5: #999;
+$color-neutral-6: #aaa;
+$color-neutral-7: #ccc;
+$color-neutral-8: #eee;
 
-$color-brand-1: rgb(0, 100, 140);
-$color-brand-2: rgb(40, 170, 220);
-$color-brand-3: rgb(70, 200, 250);
-
-$color-theme-1: rgb(0, 100, 140);
-$color-theme-2: rgb(40, 170, 220);
-$color-theme-3: rgb(70, 200, 250);
+$color-brand-1: #ff9d00;
+$color-brand-2: darken($color-brand-1, 15%);
+$color-brand-3: darken($color-brand-1, 30%);
 
 // -----------------------------------------------------------------------------
 //
@@ -57,18 +53,4 @@ $breakpoints: (
   lg: 760px,
   xl: 1020px,
   xx: 1200px
-);
-
-// -----------------------------------------------------------------------------
-//
-//      Grid Config
-//
-// -----------------------------------------------------------------------------
-
-$grid-columns: 12;
-$grid-gutters: (
-  sm: 0.2rem,
-  md: 0.4rem,
-  lg: 0.8rem,
-  xl: 1.6rem
 );

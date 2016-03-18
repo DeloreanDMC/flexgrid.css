@@ -7,7 +7,7 @@
 .Nav {
   display: flex;
   justify-content: space-between;
-  background-color: $color-theme-2;
+  background-color: $color-brand-1;
 }
 
 .Nav-link {
@@ -17,5 +17,5 @@
 
 .Nav-link:hover {
   color: #fff;
-  background-color: $color-theme-1;
+  background-color: $color-brand-3;
 }
