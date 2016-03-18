@@ -982,15 +982,3 @@
   padding-top: 2.2rem;
   padding-left: 2.2rem;
 }
-
-/**
- * Grid-content
- *
- * This is just an demonstrative aesthetic class to contain and style content
- * inside a grid cell. It isn't necessary, and you'll likely be using your
- * own inner styling containers.
- */
-.Grid-content {
-  padding: 1.2rem;
-  background-color: #eee;
-}
