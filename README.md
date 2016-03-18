@@ -5,6 +5,7 @@ _A responsive, declarative grid system powered by flexbox. Demo at [flexgrid.axi
 [![NPM](https://nodei.co/npm/flexgrid.css.png)](https://nodei.co/npm/flexgrid.css/)
 
 [![Dependencies](https://david-dm.org/axiomzen/flexgrid.css.png)](https://david-dm.org/axiomzen/flexgrid.css.png)
+<a href="https://zenhub.io"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png" height="18px"></a>
 
 Flexgrid.css is a responsive, declarative grid system powered by flexbox. It allows you to generate finely tuned responsive layouts at a lightning pace. The declarative nature lets you determine what size a grid cell should be at a certain screen width.
 
