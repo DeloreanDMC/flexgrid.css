@@ -15,10 +15,12 @@ $flexgrid-breakpoints: (
 $flexgrid-columns: 12;
 
 $flexgrid-gutters: (
-  sm: 0.2rem,
-  md: 0.4rem,
-  lg: 0.8rem,
-  xl: 1.6rem
+  xs: 0.2rem,
+  sm: 0.32rem,
+  md: 0.52rem,
+  lg: 0.84rem,
+  xl: 1.36rem,
+  xx: 2.2rem
 );
 
 @mixin flexgrid-break($size) {

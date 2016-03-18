@@ -923,44 +923,64 @@
  *   ...
  * </div>
  */
-.Grid--gutter-sm {
+.Grid--gutter-xs {
   margin-top: -0.2rem;
   margin-left: -0.2rem;
 }
 
-.Grid--gutter-sm > [class^="Grid-cell"] {
+.Grid--gutter-xs > [class^="Grid-cell"] {
   padding-top: 0.2rem;
   padding-left: 0.2rem;
 }
 
+.Grid--gutter-sm {
+  margin-top: -0.32rem;
+  margin-left: -0.32rem;
+}
+
+.Grid--gutter-sm > [class^="Grid-cell"] {
+  padding-top: 0.32rem;
+  padding-left: 0.32rem;
+}
+
 .Grid--gutter-md {
-  margin-top: -0.4rem;
-  margin-left: -0.4rem;
+  margin-top: -0.52rem;
+  margin-left: -0.52rem;
 }
 
 .Grid--gutter-md > [class^="Grid-cell"] {
-  padding-top: 0.4rem;
-  padding-left: 0.4rem;
+  padding-top: 0.52rem;
+  padding-left: 0.52rem;
 }
 
 .Grid--gutter-lg {
-  margin-top: -0.8rem;
-  margin-left: -0.8rem;
+  margin-top: -0.84rem;
+  margin-left: -0.84rem;
 }
 
 .Grid--gutter-lg > [class^="Grid-cell"] {
-  padding-top: 0.8rem;
-  padding-left: 0.8rem;
+  padding-top: 0.84rem;
+  padding-left: 0.84rem;
 }
 
 .Grid--gutter-xl {
-  margin-top: -1.6rem;
-  margin-left: -1.6rem;
+  margin-top: -1.36rem;
+  margin-left: -1.36rem;
 }
 
 .Grid--gutter-xl > [class^="Grid-cell"] {
-  padding-top: 1.6rem;
-  padding-left: 1.6rem;
+  padding-top: 1.36rem;
+  padding-left: 1.36rem;
+}
+
+.Grid--gutter-xx {
+  margin-top: -2.2rem;
+  margin-left: -2.2rem;
+}
+
+.Grid--gutter-xx > [class^="Grid-cell"] {
+  padding-top: 2.2rem;
+  padding-left: 2.2rem;
 }
 
 /**
