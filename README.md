@@ -1,27 +1,52 @@
-# Flexgrid.css
+# flexgrid.css
 
-A responsive, declarative grid system powered by flexbox, built with a lot of love by [Nick Salloum](http://callmenick.com).
+_A responsive, declarative grid system powered by flexbox. Demo at [flexgrid.axiomzen.co](http://flexgrid.axiomzen.co)_
+
+[![NPM](https://nodei.co/npm/flexgrid.css.png)](https://nodei.co/npm/flexgrid.css/)
+
+[![Dependencies](https://david-dm.org/axiomzen/flexgrid.css.png)](https://david-dm.org/axiomzen/flexgrid.css.png)
+
+Flexgrid.css is a responsive, declarative grid system powered by flexbox. It allows you to generate finely tuned responsive layouts at a lightning pace. The declarative nature lets you determine what size a grid cell should be at a certain screen width.
 
 ## Installation
 
-### As an `npm` module
+There are two ways to use flexgrid.css:
 
-You can include it in your project as an `npm` module by running the following:
+* Use it as an `npm` module by running the following command:
 
-```
-npm install flexgrid.css --save
-```
+  ```
+  npm install flexgrid.css --save
+  ```
 
-### Download Files Directly
-
-You can grab the CSS files here:
-
-* Uncompressed - [flexgrid.css](https://raw.githubusercontent.com/callmenick/flexgrid/gh-pages/css/flexgrid.css)
-* Compressed - [flexgrid.min.css](https://raw.githubusercontent.com/callmenick/flexgrid/gh-pages/css/flexgrid.min.css)
+* Download the files directly:
+  - Uncompressed - [flexgrid.css](https://raw.githubusercontent.com/axiomzen/flexgrid.css/master/dist/flexgrid.css)
+  - Compressed - [flexgrid.min.css](https://raw.githubusercontent.com/axiomzen/flexgrid.css/master/dist/flexgrid.min.css)
 
 ## Usage
 
 Grids can de used on generic HTML elements such as `div`, but resets are also in place to use them on `ul` and `ol`.
+
+### Defaults
+
+If you're using it out of the box, these are the default values that come shipped:
+
+* columns: 12
+* breakpoints:
+  - `xs`: 320px
+  - `sm`: 480px
+  - `md`: 640px
+  - `lg`: 760px
+  - `xl`: 1020px
+  - `xx`: 1200px
+* gutters:
+  - `xs`: 0.2rem
+  - `sm`: 0.32rem
+  - `md`: 0.52rem
+  - `lg`: 0.84rem
+  - `xl`: 1.36rem
+  - `xx`: 2.2rem
+
+These are all easily customisable if you build the file yourself.
 
 ### Basic Usage
 
@@ -111,14 +136,14 @@ To change the orientation to a columnar grid, add the following modifier:
 To change the alignment of grid cells with respect to the flex line, use the following modifiers:
 
 ```html
-<!-- aligns to start of flex line (default) -->
-<div class="Grid Grid--top">...</div>
+<!-- aligns to start of flex line -->
+<div class="Grid Grid--alignStart">...</div>
 
 <!-- aligns to end of flex line -->
-<div class="Grid Grid--bottom">...</div>
+<div class="Grid Grid--alignEnd">...</div>
 
 <!-- aligns to center of flex line -->
-<div class="Grid Grid--center">...</div>
+<div class="Grid Grid--alignCenter">...</div>
 ```
 
 To change the spatial distribution of grid cells along the main axis, use the following modifiers:
@@ -141,26 +166,27 @@ To change the spatial distribution of grid cells along the main axis, use the fo
 
 This component has been tested in the following browsers:
 
-| ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/callmenick/browser-logos/master/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/callmenick/browser-logos/master/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/callmenick/browser-logos/master/opera/opera_48x48.png) |
-|:-:|:-:|:-:|:-:|
-| Chrome 46.0+ | Firefox 40.0+ | Safari 9.0+ | Opera 33.0+ |
+| Browser | Version |
+| ------- | ------- |
+| ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | Chrome 46.0+ |
+| ![Firefox](https://raw.githubusercontent.com/callmenick/browser-logos/master/firefox/firefox_48x48.png) | Firefox 40.0+ |
+| ![Safari](https://raw.githubusercontent.com/callmenick/browser-logos/master/safari/safari_48x48.png) | Safari 9.0+ |
+| ![Opera](https://raw.githubusercontent.com/callmenick/browser-logos/master/opera/opera_48x48.png) | Opera 33.0+ |
 
-If anyone wants to run any tests on older browser versions, please do so and reach out to me!
+## Contributing
 
-## Demo
+Please check [CONTRIBUTING.md](CONTRIBUTING.md).
 
-View the live demo at [flexgrid.callmenick.com](http://flexgrid.callmenick.com).
+This project adheres to the [Open Code of Conduct](http://todogroup.org/opencodeofconduct/). By participating, you are expected to honor this code.
 
 ## Author
 
-Nick Salloum - nick@callmenick.com
+* [AxiomZen](https://www.axiomzen.co/)
 
-## License (MIT)
+## Collaborators
 
-Copyright (c) 2016 Nick Salloum
+* [Nick Salloum](https://github.com/callmenick)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+## License
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+[MIT](LICENSE)
