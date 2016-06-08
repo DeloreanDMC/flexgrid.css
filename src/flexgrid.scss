@@ -122,6 +122,7 @@ $flexgrid-gutters: (
 /**
  * Grid-cell--[size]
  * Grid-cell--[size]-[span]
+ * Grid-cell--[size]-offset-[span]
  *
  * For the sake of the following documentation, let's assume that the breakpoint
  * sizes in the gridconfig remain:
@@ -164,6 +165,26 @@ $flexgrid-gutters: (
  *   <div class="Grid-cell--xs-12 Grid-cell--sm-4 Grid-cell--lg-8"></div>
  *   <div class="Grid-cell--xs-12 Grid-cell--sm-4 Grid-cell--lg-2"></div>
  * </div>
+ *
+ * Grid-cell--[size]-offset-[span]
+ *
+ * These modifiers can also be used declaratively, and chaining them together
+ * will add offsets to grid cells at various breakpoints. For example, at the
+ * smallest breakpoint, you can have an offset of 0 columns, at a medium
+ * breakpoint, an offset of 4 columns, and at a large breakpoint, an offset of
+ * 2 columns. Offsets are from the left, as that's where the horizontal stacking
+ * of columns begins. If at any point, you want the offset to go back to 0, you
+ * can use the offset-0 modifier.
+ *
+ * Example HTML:
+ *
+ * <div class="Grid Grid--gutter-xl">
+ *   <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--md-offset-6"></div>
+ *   <div class="Grid-cell--xs-12 Grid-cell--md-8"></div>
+ * </div>
+ *
+ * It's important to be careful that your offsets + cell spans don't overflow
+ * outside the rows...a little bit of very basic math is required!
  */
 
 $flexgrid-cell-counter: 1;
@@ -191,6 +212,14 @@ $flexgrid-cell-counter: 1;
       .Grid-cell--#{$key}-#{$i} {
         flex: 0 0 ($i/$flexgrid-columns)*100%;
         max-width: ($i/$flexgrid-columns)*100%;
+      }
+    }
+  }
+
+  @include flexgrid-break($key) {
+    @for $i from 0 through $flexgrid-columns {
+      .Grid-cell--#{$key}-offset-#{$i} {
+        margin-left: ($i/$flexgrid-columns)*100%;
       }
     }
   }
