@@ -145,6 +145,7 @@
 /**
  * Grid-cell--[size]
  * Grid-cell--[size]-[span]
+ * Grid-cell--[size]-offset-[span]
  *
  * For the sake of the following documentation, let's assume that the breakpoint
  * sizes in the gridconfig remain:
@@ -187,6 +188,26 @@
  *   <div class="Grid-cell--xs-12 Grid-cell--sm-4 Grid-cell--lg-8"></div>
  *   <div class="Grid-cell--xs-12 Grid-cell--sm-4 Grid-cell--lg-2"></div>
  * </div>
+ *
+ * Grid-cell--[size]-offset-[span]
+ *
+ * These modifiers can also be used declaratively, and chaining them together
+ * will add offsets to grid cells at various breakpoints. For example, at the
+ * smallest breakpoint, you can have an offset of 0 columns, at a medium
+ * breakpoint, an offset of 4 columns, and at a large breakpoint, an offset of
+ * 2 columns. Offsets are from the left, as that's where the horizontal stacking
+ * of columns begins. If at any point, you want the offset to go back to 0, you
+ * can use the offset-0 modifier.
+ *
+ * Example HTML:
+ *
+ * <div class="Grid Grid--gutter-xl">
+ *   <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--md-offset-6"></div>
+ *   <div class="Grid-cell--xs-12 Grid-cell--md-8"></div>
+ * </div>
+ *
+ * It's important to be careful that your offsets + cell spans don't overflow
+ * outside the rows...a little bit of very basic math is required!
  */
 .Grid-cell--xs {
   -webkit-box-flex: 0;
@@ -388,6 +409,48 @@
   }
 }
 
+@media (min-width: 320px) {
+  .Grid-cell--xs-offset-0 {
+    margin-left: 0%;
+  }
+  .Grid-cell--xs-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .Grid-cell--xs-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .Grid-cell--xs-offset-3 {
+    margin-left: 25%;
+  }
+  .Grid-cell--xs-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .Grid-cell--xs-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .Grid-cell--xs-offset-6 {
+    margin-left: 50%;
+  }
+  .Grid-cell--xs-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .Grid-cell--xs-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .Grid-cell--xs-offset-9 {
+    margin-left: 75%;
+  }
+  .Grid-cell--xs-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .Grid-cell--xs-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .Grid-cell--xs-offset-12 {
+    margin-left: 100%;
+  }
+}
+
 .Grid-cell--sm {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -489,6 +552,48 @@
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+
+@media (min-width: 480px) {
+  .Grid-cell--sm-offset-0 {
+    margin-left: 0%;
+  }
+  .Grid-cell--sm-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .Grid-cell--sm-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .Grid-cell--sm-offset-3 {
+    margin-left: 25%;
+  }
+  .Grid-cell--sm-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .Grid-cell--sm-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .Grid-cell--sm-offset-6 {
+    margin-left: 50%;
+  }
+  .Grid-cell--sm-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .Grid-cell--sm-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .Grid-cell--sm-offset-9 {
+    margin-left: 75%;
+  }
+  .Grid-cell--sm-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .Grid-cell--sm-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .Grid-cell--sm-offset-12 {
+    margin-left: 100%;
   }
 }
 
@@ -596,6 +701,48 @@
   }
 }
 
+@media (min-width: 640px) {
+  .Grid-cell--md-offset-0 {
+    margin-left: 0%;
+  }
+  .Grid-cell--md-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .Grid-cell--md-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .Grid-cell--md-offset-3 {
+    margin-left: 25%;
+  }
+  .Grid-cell--md-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .Grid-cell--md-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .Grid-cell--md-offset-6 {
+    margin-left: 50%;
+  }
+  .Grid-cell--md-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .Grid-cell--md-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .Grid-cell--md-offset-9 {
+    margin-left: 75%;
+  }
+  .Grid-cell--md-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .Grid-cell--md-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .Grid-cell--md-offset-12 {
+    margin-left: 100%;
+  }
+}
+
 .Grid-cell--lg {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -697,6 +844,48 @@
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+
+@media (min-width: 760px) {
+  .Grid-cell--lg-offset-0 {
+    margin-left: 0%;
+  }
+  .Grid-cell--lg-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .Grid-cell--lg-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .Grid-cell--lg-offset-3 {
+    margin-left: 25%;
+  }
+  .Grid-cell--lg-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .Grid-cell--lg-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .Grid-cell--lg-offset-6 {
+    margin-left: 50%;
+  }
+  .Grid-cell--lg-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .Grid-cell--lg-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .Grid-cell--lg-offset-9 {
+    margin-left: 75%;
+  }
+  .Grid-cell--lg-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .Grid-cell--lg-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .Grid-cell--lg-offset-12 {
+    margin-left: 100%;
   }
 }
 
@@ -804,6 +993,48 @@
   }
 }
 
+@media (min-width: 1020px) {
+  .Grid-cell--xl-offset-0 {
+    margin-left: 0%;
+  }
+  .Grid-cell--xl-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .Grid-cell--xl-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .Grid-cell--xl-offset-3 {
+    margin-left: 25%;
+  }
+  .Grid-cell--xl-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .Grid-cell--xl-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .Grid-cell--xl-offset-6 {
+    margin-left: 50%;
+  }
+  .Grid-cell--xl-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .Grid-cell--xl-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .Grid-cell--xl-offset-9 {
+    margin-left: 75%;
+  }
+  .Grid-cell--xl-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .Grid-cell--xl-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .Grid-cell--xl-offset-12 {
+    margin-left: 100%;
+  }
+}
+
 .Grid-cell--xx {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -905,6 +1136,48 @@
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Grid-cell--xx-offset-0 {
+    margin-left: 0%;
+  }
+  .Grid-cell--xx-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .Grid-cell--xx-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .Grid-cell--xx-offset-3 {
+    margin-left: 25%;
+  }
+  .Grid-cell--xx-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .Grid-cell--xx-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .Grid-cell--xx-offset-6 {
+    margin-left: 50%;
+  }
+  .Grid-cell--xx-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .Grid-cell--xx-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .Grid-cell--xx-offset-9 {
+    margin-left: 75%;
+  }
+  .Grid-cell--xx-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .Grid-cell--xx-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .Grid-cell--xx-offset-12 {
+    margin-left: 100%;
   }
 }
 
