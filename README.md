@@ -115,6 +115,28 @@ This grid will display cells the same at any screen size, in a `2:8:2` ratio (co
 
 In the above example, the cells will be in a ratio of `4:4:4` per row, making 4 rows in total, by default and at the `xs` screen size. At the `md` screen size, they will occupy `3:3:3:3` per row, making 3 rows in total. Finally at the `lg` screen size, they will occupy `2:2:2:2:2:2` per row, making 2 rows in total. If you're afraid about cell rows not always adding up to the number 12, fear not. Extra cells just overflow to a new line.
 
+### Offsetting Cells
+
+If at any point in time you want to offset cells, there's a simple way to do just that. In the following example, the first cell will span 12 columns at `xs` screens, and 6 columns at `md` screens. It will also be offset by `6` columns on `md` screens. The second cell will conform to the flow of the first one, and sit below it because it can't fit in the first row:
+
+```html
+<div class="Grid Grid--gutter-xl">
+  <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--md-offset-6"></div>
+  <div class="Grid-cell--xs-12 Grid-cell--md-8"></div>
+</div>
+```
+
+If at any point you want to reset the offset to 0, you can just use the `offset-0` addition to the modifier:
+
+```html
+<div class="Grid Grid--gutter-xl">
+  <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--md-offset-6 Grid-cell--xl-offset-0"></div>
+  <div class="Grid-cell--xs-12 Grid-cell--md-8"></div>
+</div>
+```
+
+It's important to be careful that your offsets + cell spans don't overflow outside the rows...a little bit of very basic math is required!
+
 ### Adding Gutters
 
 You can add gutters to the grid cells which will create an even, fixed horizontal and vertical spacing between cells, while collapsing the excess amounts. Gutter modifiers come in four sizes:
